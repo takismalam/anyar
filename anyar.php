@@ -32,13 +32,13 @@ function change(){
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] Claim voc GORIDE 8K");
+        echo "\n".color("yellow","!] Claim voc referal");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(3);
 }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDEPAY"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"G-YN6TJY3"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
